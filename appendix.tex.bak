@@ -1,0 +1,141 @@
+
+\chapter{How to use the calibration tool}\label{chapter:appendixA}
+
+The calibration tool in $Matlab^\copyright$ is provided to make the
+parametrization of models simple and quick. Thereby a GUI leads the
+user through the whole procedure.\\
+The calibration tool provides two ways to parametrise a model. First
+there are some predefined blocks, which can be parametrised directly
+without making a model in $Simulink^\copyright$. Predefined blocks
+are:
+\begin{itemize}
+\item Incompressible Flow Restriction
+\item Compressible Flow Restriction
+\item Compressor
+\item Receiver
+\item Gas Exchange
+\item Torque Generation
+\item Exhaust Gas Temperature
+\end{itemize}
+The other way is to make an own $Simulink^\copyright$ model. \\
+Following a description of the two ways.
+
+\begin{figure}[h]
+\centering
+%\begin{center}
+\includegraphics[width=0.75\textwidth]{pics/tooldiagramm_tex.eps}
+\caption{The two parametrization ways.} \label{pics:tooldiagramm}
+%\end{center}
+\end{figure}
+
+\section{Installation of the calibration tool}
+Save the directory \verb+calibration+ on your computer. Then start
+$Matlab^\copyright$ and make \verb+calibration+ to your current
+directory. To start the calibration tool write \emph{step1} in the
+command window and press \emph{Enter}.
+\section{Parametrization of predefined model}
+In the following known parameters are parameters which value is known and unknown parameters are parameters which value has to be identified.
+\begin{description}
+\item[Step 1: Choice of the block] Choose with the forward and backward buttons the block of the predefined blocks you want to parametrise.
+\item[Step 2: Excel File] Step 2 requests you to make an Excel sheet with the denoted entries in the columns. Make this Excel sheet and press then \emph{Browse} to select the corresponding file. Make sure that the data is in the first spreadsheet.
+\item[Step 3: Parameters] Here you have to put in the values of the model parameters. On the upper part put in the values of the already known parameters, on the lower part the starting values for the parametrization of the parameters that have to be identified. The starting values should be reasonable values, otherwise the parametrization couldn't succeed. \\
+    Avoiding to input all parameters every time you use the same block, the block parameters can be saved with the button \emph{Save}. Afterwards this parameters can be loaded with \emph{Load}.
+\item[Step 4: Identification] The unknown parameters are identified.
+\item[Step 5: Identified Parameters] Step 5 shows the identified values of the unknown
+parameters.\\
+If satisfied with the achieved results you can save the parameter
+values with the \emph{Save Parameters} button as MAT-file.
+\end{description}
+The calibration tool can yield unsatisfactory results if more than 4
+parameters have to be identified simultaneously and the starting
+values badly chosen. Then try the parametrization with the second
+way described in the following section. You can use then the
+$Simulink^\copyright$ models of the predefined blocks saved under
+\verb+...calibration\models+.
+%Because the tool has problems to
+%identify more than 4 parameters simultaneously when the starting
+%values are not well chosen, try the parametrization with the second
+%way described in the following section. You can use then the
+%$Simulink^\copyright$ models of the predefined blocks saved under
+%\verb+...calibration\models+.
+
+\section{Parametrization of individual model}
+This options allows you to identify the parameters of your
+individual $Simulink^\copyright$ model. This way is more
+time-consuming than the way with the predefined models, as you have
+to make a model and input all parameters, modelinputs and
+modeloutputs. But therefore you have more liberties. \\
+First before using the calibration tool you have to build a model.
+Use \emph{From Workspace} blocks for the modelinputs. The parameter
+of this block is a 2-D signal structure with time \emph{t} and the
+input data.\\
+Then use \emph{To Workspace} blocks for the modeloutputs, which are
+used for the comparison with the measured data. Finally you have to
+specify the simulation time with a \emph{Clock} block. Figure
+\ref{pics:simulinkmodel} shows an example of such a model.
+
+\begin{figure}[h]
+\centering
+%\begin{center}
+\includegraphics[angle=270, width=0.75\textwidth]{pics/simulinkmodel_tex.eps}
+\caption{Example of a model which can be used in the calibration
+tool.} \label{pics:simulinkmodel}
+%\end{center}
+\end{figure}
+
+\begin{description}
+\item[Step 1: Choice of the block] Choose the block \emph{Paremetrise your individual model}.
+\item[Step 2: How to do] This step gives you instructions how to prepare the model and how to input the parameters, modelinputs and modeloutputs.
+\item[Step 3: Parameters] Here you have to put in the model parameters with name and the corresponding value, or the starting value respectively, if it is a parameter to identify. Press \emph{Add} to add a new parameter and \emph{Delete} to delete the last parameter. Make sure that you use the same names as used in the model. \\
+    With the radio buttons \emph{known} and \emph{to identify} you can select, if the parameter is a known parameter or if it is a parameter which value has to be identified. This is also helpfull when parametrising a model with a lot of unknown
+    parameters, since the tool has problems to identify more than 4
+    parameters simultaneously. You can select then some actually
+    unknown parameters to be known parameters, and let so identify only
+    a part of all unknown parameters. Next time let the other part
+    of the unknown parameters identify. So you approach iteratively
+    to the solution. \\
+    When you have put in the parameters of your model in the past
+    and saved them then (See Step5), you can load them with
+    \emph{Load}.
+\item[Step 4: Modelinputs] Put in here the names of the modelinputs.
+    \\
+    As with the parameters you can add a modelinput with \emph{Add} and
+    delete one with \emph{Delete}. Make sure that you use the same
+    names as in the model.
+\item[Step 5: Modeloutputs] The same as for the modelinputs, but
+    here for the modeloutputs. \\
+    With the \emph{Save} button you can save all paramters,
+    modelinputs and modeloutputs. So you avoid to put in them again
+    in the future. (See step 3 to how to load them).
+\item[Step 6: Excel File] As with the predefined blocks you have to
+    make an Excel sheet with the indicated data. Select the Excel file
+    with the correspondig \emph{Browse} button. \\
+    Secondly you have to select your model.\\
+    Sometimes you have additional variables or vectors and matrices
+    (e.g. for a look-up table. Then you can make an optional M-file that
+    loads
+    this variables. Define all this variables as \verb+global+. \\
+    Select this M-file with the third \emph{Browse} button.
+\item[Identification] The unknown parameters are identified.
+\item[Step 7: Identified Parameters] All parameters with their
+    values or their identified values respectively are displayed.\\
+    If you want to perform an iteration as described in Step 3 press
+    \emph{Iterate}. The programm jumps then back to step 3, but
+    adopts the new identified parameter values. \\
+    All parameters can be saved with \emph{Save Parameters}.
+\end{description}
+
+%\begin{displaymath}
+%\xymatrix{
+%A \ar[d] \ar[dr] \ar[drr] & & \\
+%B & C & D }
+%\end{displaymath}
+
+ \cleardoublepage
+
+
+%\chapter{Nochmals irgendwas}\label{sec:nochirgendwas}
+%
+%Bla bla \dots
+%
+% \cleardoublepage

@@ -1,0 +1,40 @@
+
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+
+\bibitem {intro} {\sc L.~Guzzella, Ch.~Onder}:
+{\it Introduction to Modeling and Control of Internal Combustion
+Engine Systems}. Z\"{u}rich, Springer-Verlag 2004.
+
+\bibitem {aachen} {\sc B.~Kinoo, M.~Krüger, S.~Pischinger,
+J.~Rückert, A.~Schlosser, M.~Enning, H.~Rake}: {\it Modellgestützte
+Dieselmotorregelung}. Lehrstuhl für Verbrennungskraftmaschinen der
+RWTH Aachen, Institut für Regelungstechnik der RWTH Aachen. Aachen,
+2001.
+
+\bibitem {frei} {\sc S.~Frei}:
+{\it ???}. Institut f\"{u}r
+Mess- und Regeltechnik, Eidgen\"{o}ssische Technische Hochschule
+Z\"{u}rich. Z\"{u}rich, 2000.
+
+\bibitem {modeling} {\sc L.~Guzzella}:
+{\it Introduction to Modeling and Control of Internal Combustion
+Engine Systems}. Z\"{u}rich, Springer-Verlag 2004.
+
+%\bibitem {optreg} {\sc H.~P.~Geering}:
+%{\it Optimale Regelung}. Z\"{u}rich, IMRT Press 1999.
+
+%\bibitem {fasys} {\sc L.~Guzzella}:
+%{\it Fahrzeugantriebssysteme}. Institut f\"{u}r Energietechnik,
+%Eidgen\"{o}ssische Technische Hochschule Z\"{u}rich. Z\"{u}rich, 1999.
+
+%\bibitem {motsys} {\sc L.~Guzzella, Ch.~Onder}:
+%{\it Modeling and Control of IC Engine Systems}. Institut f\"{u}r
+%Mess- und Regeltechnik, Eidgen\"{o}ssische Technische Hochschule
+%Z\"{u}rich. Z\"{u}rich, 2000.
+
+%\bibitem {sysdyn} {\sc L.~Guzzella}:
+%{\it System Dynamics}. Institut f\"{u}r Mess- und Regeltechnik,
+%Eidgen\"{o}ssische Technische Hochschule Z\"{u}rich. Z\"{u}rich, 2001.
+
+\end{thebibliography}

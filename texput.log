@@ -1,0 +1,20 @@
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7 Beta 4) (preloaded format=pdflatex 2007.12.10)  28 DEC 2007 09:57
+entering extended mode
+**shell_escape = 1 C:\Dokumente und Einstellungen\Samuel\Desktop\Bericht\Berich
+t.tex
+
+! Emergency stop.
+<*> shell_escape 
+                 = 1 C:\Dokumente und Einstellungen\Samuel\Desktop\Bericht\B...
+*** (job aborted, file error in nonstop mode)
+
+ 
+Here is how much of TeX's memory you used:
+ 2 strings out of 95351
+ 22 string characters out of 1184546
+ 44877 words of memory out of 1500000
+ 3289 multiletter control sequences out of 110000
+ 3640 words of font info for 14 fonts, out of 1200000 for 2000
+ 14 hyphenation exceptions out of 8191
+ 0i,0n,0p,1b,6s stack positions out of 5000i,500n,10000p,200000b,5000s
+!  ==> Fatal error occurred, no output PDF file produced!

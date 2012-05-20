@@ -1,0 +1,22 @@
+\chapter{Introduction}\label{chapter:introduction}
+
+
+\section{Motivation}\label{sec:motivation}
+In view of the future stringent emissions limitations, new control
+algorithms have to be designed. For optimization and testing of such
+control algorithms, fast engine models are necessary. Based on
+measurement data of an HD and an HSDI diesel engine, a mean-value
+model of the whole engine has to be derived. This model has to be
+easy to calibrate on various engines. It should be implemented in
+the Simulink environment. The implemented blocks should be held as
+general as possible so they can be used for different applications
+(Simulink Engine Library).
+
+\section{Goals}\label{sec:goals}
+The goal of this thesis is not to build totally new models for the
+different subsystems of a modern Diesel engine. So most model
+approaches for the different subsystems are taken from literature.
+The sources are referred at the corresponding places. A meaningfull 
+\section{Procedure}\label{sec:procedure}
+First the model approaches for the different subsystems are
+presented.

@@ -1,0 +1,95 @@
+\documentclass[10pt,twoside,a4paper]{report}
+
+ \usepackage[dt,english]{ethimrt}     % New styles and commands
+                                      % Options: german/english, st/dt
+
+% \includeonly{}                      % Quick formatting
+% \usepackage[draft]{graphicx}        % Quick formatting
+
+ \usepackage{a4}                      % Paper size
+ \usepackage[latin1]{inputenc}        % Keybord settings
+ \usepackage{amsmath}                 % Additional math functionality
+ \usepackage{amssymb}                 % Additional math functionality
+ \usepackage{graphicx}                % EPS figures
+ \usepackage[dvips]{epsfig}           % EPS figures
+ \usepackage{float}                   % Placement of floating objects
+ \usepackage{fancyhdr}                % Headings
+ %\usepackage[]{xy}
+
+% \usepackage{german}                  % German language
+% \usepackage{ae}                      % German specials
+
+%---------------------------------------------------------------------------
+
+ \setlength{\parindent}{0em}                   % Disable parindent
+ \rhead[\thepage]{\nouppercase{\rightmark}}    % Special headings
+ \lhead[\nouppercase{\leftmark}]{\thepage}     % Special headings
+ \cfoot{}                                      % Special headings
+
+%---------------------------------------------------------------------------
+
+ \title{Mean-Value Model of a Modern Diesel Engine}
+
+ \studentA{Philipp Sch\"{u}rmann}
+ \ethidA{342234234}
+ \semesterA{8}
+ \emailA{philisch@student.ethz.ch}
+
+ \studentB{Samuel Fux}
+ \ethidB{03-013-928}
+ \semesterB{8}
+ \emailB{fuxs@student.ethz.ch}
+
+ \supervision{Michael Benz}
+ \date{June 2007}
+
+ \infopage
+ \declaration
+
+%===========================================================================
+\begin{document}
+
+%---------------------------------------------------------------------------
+% Title page
+
+ \maketitle
+ \pagestyle{plain}
+ \pagenumbering{roman}
+
+%---------------------------------------------------------------------------
+% Preamble
+
+ \include{preamble}
+
+ \pagestyle{headings}                 % Default headings
+ \pagestyle{fancy}                   % Special headings
+ \pagenumbering{arabic}
+
+%---------------------------------------------------------------------------
+% Chapters
+
+ \include{introduction}
+ \cleardoublepage
+ \include{modeling}
+ \cleardoublepage
+ \include{tool}
+ \cleardoublepage
+ \include{calibration}
+ \cleardoublepage
+%% ...
+%
+%---------------------------------------------------------------------------
+% Appendix
+
+ \appendix
+ \include{appendix}
+%
+%---------------------------------------------------------------------------
+% Literature
+
+ \include{bibliography}
+
+%---------------------------------------------------------------------------
+
+\end{document}
+%===========================================================================
